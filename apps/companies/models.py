@@ -1,5 +1,9 @@
 from django.db import models
 
 
-class company(models.Model):
-    name = models.CharField(max_length=100, help_text="Nome da Empresa")
+class Company(models.Model):
+    name = models.CharField('Nome', max_length=100, help_text="Nome da Empresa")
+
+
+    def __str__(self) -> str:
+        return self.name
